@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <!--@drawable/common_progress_dialog_background"-->
+    <LinearLayout
+        android:layout_width="295dp"
+        android:layout_height="133dp"
+        android:orientation="vertical"
+        android:background="@drawable/shape_corner"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+        <!--Title-->
+        <TextView
+            android:id="@+id/progress_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginTop="47dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000"
+            android:text=""
+            />
+
+        <!--进度-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@mipmap/progress"
+            >
+            <RelativeLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/p_bot_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/shape_round_corner_bottom" />
+
+                <com.project.customprogressdialog.RoundCornerImageView
+                    android:id="@+id/p_cover_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic_cover_blue_white" />
+
+            </RelativeLayout>
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:progressDrawable="@drawable/common_progressbar_bg"
+                android:visibility="invisible"
+                />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <!--左边的-->
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/progress_percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:textColor="#000"
+                android:text="3243"
+                android:visibility="invisible"
+
+                />
+            <!--右边的-->
+            <TextView
+                android:id="@+id/progress_number"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:gravity="center_horizontal"
+                android:textColor="#000"
+                android:text="23424sdfsf2"
+                android:visibility="invisible"
+                />
+        </LinearLayout>
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_cancel"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_marginRight="30dp"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:textSize="20sp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="取消"-->
+            <!--/>-->
+    </LinearLayout>
+        <ImageView
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/head" />
+
+    <TextView
+        android:id="@+id/percent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="3dp"
+        android:textSize="13sp"
+        android:text="asasasdasd"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
